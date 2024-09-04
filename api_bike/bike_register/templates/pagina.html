@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Second Page</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis mollitia velit eveniet nihil laboriosam aperiam adipisci illo quia unde sapiente modi, quod saepe cum ad aliquam. Id consequuntur sit quisquam!</p>
+    <a href="{% url 'index' %}">Go back to your home, little son</a>
+    <form action="{% url 'bike_manager_api' %}" method="post">
+        <h1>Cadastro de bike</h1>
+        {% csrf_token %}
+        {{form_pagina}}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
